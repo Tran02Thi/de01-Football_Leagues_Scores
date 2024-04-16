@@ -1,3 +1,3 @@
 # Data Lineage
 
-<img src="./images/Data Linage.png" alt="Getting started" />
+<img src="./images/Data Lineage.drawio.png" alt="Getting started" />
