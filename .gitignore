@@ -1,8 +1,11 @@
+# Environments
+venv/
 
 # Data
 mysql/data/
 minio/
 dremio/data/
+
 
 # Service account
 trino/catalog/etl-pipeline-key.json
