@@ -2,57 +2,57 @@ version: '3.7'
 services:
   
   trino:
-    image: 'trinodb/trino:latest'
-    hostname: trino
-    ports:
-      - '8080:8080'
-    volumes:
-#      - ./etc:/usr/lib/trino/etc:ro
-      - ./etc/catalog:/etc/trino/catalog
-    networks:
-      - trino-network
+      image: 'trinodb/trino:latest'
+      hostname: trino
+      ports:
+        - '8080:8080' 
+      volumes:
+        - ./trino:/etc/trino
+      networks:
+        - trino-network
 
-  mariadb:
-    image: 'mariadb:latest'
-    container_name: mariadb
-    hostname: mariadb
-    ports:
-      - '3308:3306'
-    volumes:
-      - ./mysql:/var/lib/mysql
-    env_file:
-      - .env
-    networks:
-      - trino-network
+  de_mysql:
+      image: 'mysql:latest'
+      container_name: de_mysql
+      hostname: mysql
+      ports:
+        - '3308:3306'
+      volumes:
+        - ./mysql/data:/var/lib/mysql
+        - ./mysql:/etc/mysql/conf.d
+      env_file:
+        - .env
+      networks:
+        - trino-network
 
   hive-metastore:
-    image: 'bitsondatadev/hive-metastore:latest'
-    hostname: hive-metastore
-    ports:
-      - '9083:9083' # Metastore Thrift
-    volumes:
-      - ./hive-data:/user/hive
-      - ./conf/metastore-site.xml:/opt/apache-hive-metastore-3.0.0-bin/conf/metastore-site.xml:ro
-      - ./conf/core-site.xml:/opt/hadoop-3.3.4/etc/hadoop/core-site.xml
-    depends_on:
-      - mariadb
-    networks:
-      - trino-network
+      hostname: hive-metastore
+      image: 'bitsondatadev/hive-metastore:latest'
+      ports:
+        - '9083:9083' # Metastore Thrift
+      volumes:
+        - ./hive-metastore/metastore-site.xml:/opt/apache-hive-metastore-3.0.0-bin/conf/metastore-site.xml:ro
+      environment:
+        METASTORE_DB_HOSTNAME: de_mysql
+      depends_on:
+        - de_mysql
+      networks:
+        - trino-network
 
   minio:
-    image: 'minio/minio:latest'
-    hostname: minio
-    container_name: minio
-    ports:
-      - '9000:9000'
-      - '9001:9001'
-    volumes:
-      - ./minio:/data
-    env_file:
-      - .env
-    command: server --console-address ":9001" /data
-    networks:
-      - trino-network
+      image: 'minio/minio:latest'
+      hostname: minio
+      container_name: minio
+      ports:
+        - '9000:9000'
+        - '9001:9001'
+      volumes:
+        - ./minio:/data
+      env_file:
+        - .env
+      command: server --console-address ":9001" /data
+      networks:
+        - trino-network
 
 networks:
   trino-network:
