@@ -1,0 +1,9 @@
+dbt-trino # latest
+dbt_core
+pandas
+pyspark
+jinja2
+mysql.connector.python
+isort
+dbt-dremio
+minio
