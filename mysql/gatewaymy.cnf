@@ -1,0 +1,3 @@
+[mysqld]
+max_allowed_packet = 64M
+key_buffer = 64M
