@@ -9,4 +9,3 @@ dremio/data/
 
 # Service account
 trino/catalog/etl-pipeline-key.json
-
