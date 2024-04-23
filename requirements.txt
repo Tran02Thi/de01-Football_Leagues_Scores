@@ -1,9 +1,11 @@
-dbt-trino # latest
-dbt_core
-pandas
-pyspark
-jinja2
-mysql.connector.python
-isort
-dbt-dremio
-minio
+dbt-trino==1.4.0
+dbt_core==1.4.1
+pandas==2.2.1
+pyspark==3.4.2
+jinja2==3.1.2
+mysql.connector.python==8.3.0
+isort==5.13.2
+dbt-dremio==1.5.1
+minio==7.2.5
+flake8==7.0.0
+black==22.12.0
