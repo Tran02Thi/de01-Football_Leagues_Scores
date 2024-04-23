@@ -1,0 +1,34 @@
+version: 2
+
+sources: 
+  - name: silver
+    tables:
+        - name: player_contribute_assists
+          external:
+            location: 's3a://warehouse/silver/player_contribute_assists'
+          
+        - name: detail_match_of_club_RealMadrid
+          external:
+            location: 's3a://warehouse/silver/detail_match_of_club_RealMadrid'
+          
+        - name: player_club_RealMadrid_season_2022
+          external:
+            location: 's3a://warehouse/silver/player_club_RealMadrid_season_2022'
+
+        - name: player_contribute_goals
+          external:
+            location: 's3a://warehouse/silver/player_contribute_goals'
+
+        - name: player_performance_season_2022
+          external:
+            location: 's3a://warehouse/silver/player_performance_season_2022'
+
+  - name: bronze
+    tables:
+        - name: raw_games
+          external:
+              location: 's3a://warehouse/bronze/raw_games'
+        - name: raw_competitions
+          external:
+              location: 's3a://warehouse/bronze/raw_competitions'
+        
