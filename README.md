@@ -1,6 +1,6 @@
 # Data Lineage
 
-<img src="./images/Data Lineage.drawio.png" alt="Getting started" />
+<img src="./images/Data Lineage.png" alt="Getting started" />
 
 
 # Dashboard
