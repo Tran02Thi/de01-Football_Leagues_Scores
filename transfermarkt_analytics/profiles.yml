@@ -35,20 +35,3 @@ gold:
       type: trino
       user: admin
   target: dev
-
-
-warehouse:
-  outputs:
-    dev:
-      dremio_space: '@user'
-      dremio_space_folder: no_schema
-      object_storage_path: '"warehouse_0205"."football"'
-      object_storage_source: Data Warehouse
-      password: admin123
-      port: 9047
-      software_host: localhost
-      threads: 1
-      type: dremio
-      use_ssl: false
-      user: admin
-  target: dev
