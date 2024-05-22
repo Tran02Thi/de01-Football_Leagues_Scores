@@ -1,5 +1,6 @@
+
 up:
-	docker-compose up -d
+	terraform apply
 
 down:
 	docker-compose down 
