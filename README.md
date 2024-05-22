@@ -2,6 +2,8 @@
 
 <img src="./images/Data Lineage.png" alt="Getting started" />
 
+<br />
+
 
 
 ## Prepare infrastructure
@@ -107,8 +109,3 @@ trino> CREATE SCHEMA IF NOT EXISTS datalake.gold WITH (location = 's3a://warehou
 ```bash
     make build data-lakehouse
 ```
-
-
-# Dashboard
-
-<img src="./images/Real Madrid.png" alt="Getting started" />
