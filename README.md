@@ -201,7 +201,6 @@ trino> CREATE SCHEMA IF NOT EXISTS datalake.gold WITH (location = 's3a://warehou
 ```
 <br>
 <img src="./images/S3_2.png" alt="Getting started" /> <br>
-<br>
 
 ###  4.4 <a name='Preparedbt-trino'></a>Prepare dbt-trino
 ```bash
@@ -300,6 +299,7 @@ Now, you check table in warehouse_football:
 <br>
   <img src="./images/prepare DW_2.png" alt="Getting started" />
 <br>
+
 Create the same with the remaining tables
 
 <br>
