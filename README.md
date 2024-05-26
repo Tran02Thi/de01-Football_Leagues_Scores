@@ -257,7 +257,7 @@ _**Layer Gold**_
 - Then select _**Amazon S3**_ under Object Storage <br>
 <br>
 <img src="./images/Choose S3, GCP.png" alt="Getting started" /> <br>
-<br>
+
 - Fill in the details like the *Name* of the connector, *AWS Access Key*, *AWS Access Secret* and under Buckets, please add _**warehouse**_ as shown below <br>
 <br>
 <img src="./images/S3_3.png" alt="Getting started" /> 
