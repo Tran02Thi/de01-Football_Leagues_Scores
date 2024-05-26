@@ -253,7 +253,6 @@ _**Layer Gold**_
 ###  4.8 <a name='ConnectS3andGCPinDataLakehouse'></a>Connect S3 and GCP in DataLakehouse 
 ####  4.8.1 <a name='ConnectS3'></a>Connect S3
 - Now you open Dremio at http://localhost:9047/
-<br>
 - Click on _**Add Source**_ at the bottom left 
 - Then select _**Amazon S3**_ under Object Storage <br>
 <br>
@@ -300,7 +299,6 @@ Now, you check table in warehouse_football:
 
 <br>
   <img src="./images/prepare DW_2.png" alt="Getting started" />
-<br>
 <br>
 Create the same with the remaining tables
 
