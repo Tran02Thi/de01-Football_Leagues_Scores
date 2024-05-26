@@ -218,22 +218,18 @@ trino> CREATE SCHEMA IF NOT EXISTS datalake.gold WITH (location = 's3a://warehou
 ```
 <br>
 <img src="./images/S3_1.png" alt="Getting started" /> <br>
-<br>
 
 _**Layer Bronze**_
 <br>
 <img src="./images/S3_bronze.png" alt="Getting started" /> <br>
-<br>
 
 _**Layer Silver**_
 <br>
 <img src="./images/S3_silver.png" alt="Getting started" /> <br>
-<br>
 
 _**Layer Gold**_
 <br>
 <img src="./images/S3_gold.png" alt="Getting started" /> <br>
-<br>
 
 
 ###  4.6 <a name='BuildDataWarehouseGCP'></a>Build Data Warehouse (GCP)
